@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    overflow:hidden;
+    color: rgb(207, 207, 207);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 0 100px;
+  width: 100%;
+}
+
+h1 {
+  font-family: "K2D", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: black;
+  font-size: 80px;
+  margin: 100px 0 0 0 ;
+}
+
+h2 {
+  margin: 150px 0 0 0 ;
+}
+
+.AddBtn {
+  margin: 130px 0 0 72px ;
+}
+
+h2, .AddBtn, .ClearBtn {
+  font-family: "Inter", sans-serif;
+  font-weight: 180;
+  font-style: normal;
+  color: black;
+}
+
+.AddBtn, .ClearBtn {
+  background-color: #d9d9d9;
+  border: 1px var(--accent-border);
+  border-radius: .8rem;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.ClearBtn {
+  color: red;
+  filter: drop-shadow(4px 4px 2px #bdbdbd);
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.Tasks-Container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  background-color: #e7e7e8;
+  backdrop-filter: blur(10px);
+  margin: 20px auto; /*mark*/
+  border: 1px #e7e7e8 solid;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  filter: drop-shadow(8px 8px 2px #bdbdbd);
+  box-shadow: inset 5px 5px 2px #bdbdbd;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 30px;
+  height: 80vh;
+  width: 70%;
+}
+
+.TaskIn {
+  overflow: hidden;
+  resize: none;
+  color: #000;
+  background: transparent;
+  width: 100%;
+  min-height: 1.45em;
+  font: inherit;
+  text-align: left;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+
+.task-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd transparent;
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+  width: 100%;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  background-color: #e7e7e8;
+  margin-bottom: 25px;
+  border: 1px #e7e7e8 solid;
+  border-radius: .7rem;
+  filter: drop-shadow(8px 8px 2px #bdbdbd);
+  box-shadow: inset 5px 5px 2px #bdbdbd;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task {
+  cursor: grab;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.TaskBox {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #e7e7e8;
+  display: flex;
+  flex-direction: row;
+  margin: 0 15px 0 0;
+  border-radius: 5rem;
+  filter: drop-shadow(3px 3px 2px #bdbdbd);
+  box-shadow: inset 3px 3px 2px #bdbdbd;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.task-list__empty {
+  flex: 1;
+  min-height: 0;
+  color:#000;
+}
+
+.TaskBox:checked {
+  box-shadow: none;
+  background-color: #16a34a;
+}
+
+.TaskIn:read-only {
+  pointer-events: none;
+  color: grey;
+}
+
+.task-list li.task-done .TaskIn {
+  text-decoration: line-through;
+}
+
+.DeleteBtn {
+  color: #1e1e1e;
+  align-items: center;
+  background-color: #e3e3e4;
+  border: 1px #bdbdbd solid;
+  border-radius: .8rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  filter: drop-shadow(4px 4px 2px #bdbdbd);
+}
